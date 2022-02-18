@@ -23,7 +23,7 @@ class Client {
     }
 
     deleteItem = (id) => {
-        const url = 'http://localhost:5000/cart?' + new URLSearchParams({id: id})
+        const url = 'http://localhost:5000/cart?' + new URLSearchParams({item_id: id})
         return fetch(url, {
             method: 'delete',
             headers: {
