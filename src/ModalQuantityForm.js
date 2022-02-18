@@ -37,7 +37,7 @@ class ModalQuantityForm extends Component {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={() => this.props.onAddProductToCart(this.props.sku, this.state.quantity)}>
-                        Agregar
+                        Add
                     </Button>
                 </Modal.Footer>
             </Modal>
