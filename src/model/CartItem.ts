@@ -1,10 +1,23 @@
+import PricingCalculator from "./PricingCalculator";
+
 class CartItem {
-    constructor(itemObject) {
+    id: any;
+    product: any;
+    quantity: any;
+    pricingCalculator: PricingCalculator;
+
+    constructor(itemObject: { id: any; product: any[]; quantity: any; }) {
         this.id = itemObject.id
         this.product = itemObject.product[0]
         this.quantity = itemObject.quantity
+        this.pricingCalculator = new PricingCalculator();
     }
 
+    calculateSubtotal(): number {
+        return this.pricingCalculator.calculatePrice(this.product, this.quantity);
+    }
+
+    /*
     calculateSubtotal = () => {
         const sku = this.product.sku
         const normalPrice = this.product.unitPrice * this.quantity
@@ -19,6 +32,7 @@ class CartItem {
         }
         return total
     }
+    */
 }
 
 export default CartItem;

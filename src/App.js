@@ -2,7 +2,7 @@ import {Component} from "react";
 import ProductList from "./ProductList";
 import ShoppingCart from "./ShoppingCart";
 import client from "./Client";
-import CartItem from "./model/CartItem";
+import CartItem from "./model/CartItem.ts";
 
 class App extends Component {
     state = {

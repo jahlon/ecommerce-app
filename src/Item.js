@@ -15,7 +15,7 @@ class Item extends Component {
                 <th scope='row' className='text-center align-middle'>{this.props.id}</th>
                 <td className='text-start align-middle'>{this.props.productName}</td>
                 <td className='text-center align-middle'>{this.props.quantity}</td>
-                <td className='text-end align-middle'>{this.props.unitPrice.toFixed(1)}</td>
+                <td className='text-end align-middle'>{this.props.unitPrice.toFixed(3)}</td>
                 <td className='text-end align-middle'>{this.props.subtotal}</td>
                 <td className='text-center'>
                     <Button

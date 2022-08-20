@@ -1,15 +1,19 @@
+import CartItem from "./CartItem";
+
 class Cart {
+    items: CartItem[];
+
     constructor() {
         this.items = []
     }
 
-    addItem(cartItem) {
+    addItem(cartItem: CartItem) {
         this.items.push(cartItem)
     }
 
     calculateTotal() {
         let total = 0
-        for(let item in this.items) {
+        for(let item of this.items) {
             total += item.calculateSubtotal()
         }
         return total
