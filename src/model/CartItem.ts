@@ -4,18 +4,19 @@ class CartItem {
     id: any;
     product: any;
     quantity: any;
-    pricingCalculator: PricingCalculator;
+    subtotal: any; //pricingCalculator: PricingCalculator;
 
-    constructor(itemObject: { id: any; product: any[]; quantity: any; }) {
+    constructor(itemObject: { id: any; product: any[]; quantity: any; subtotal: any}) {
         this.id = itemObject.id
         this.product = itemObject.product[0]
         this.quantity = itemObject.quantity
-        this.pricingCalculator = new PricingCalculator();
+        this.subtotal = itemObject.subtotal;
+        //this.pricingCalculator = new PricingCalculator();
     }
 
-    calculateSubtotal(): number {
+    /*calculateSubtotal(): number {
         return this.pricingCalculator.calculatePrice(this.product, this.quantity);
-    }
+    }*/
 
     /*
     calculateSubtotal = () => {

@@ -14,7 +14,7 @@ class Cart {
     calculateTotal() {
         let total = 0
         for(let item of this.items) {
-            total += item.calculateSubtotal()
+            total += item.subtotal;
         }
         return total
     }

@@ -31,7 +31,7 @@ class ItemList extends Component {
                 productName={item.product.name}
                 unitPrice={item.product.unitPrice}
                 quantity={item.quantity}
-                subtotal={item.calculateSubtotal().toFixed(2)}
+                subtotal={item.subtotal.toFixed(2)}
                 onDeleteItem={this.handleDeleteItem}
             />
         ));

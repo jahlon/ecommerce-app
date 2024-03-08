@@ -20,7 +20,7 @@ class App extends Component {
     calculateTotal() {
         let cartTotal = 0;
         for(let item of this.state.items){
-            cartTotal += item.calculateSubtotal()
+            cartTotal += item.subtotal;
         }
         this.setState({total: cartTotal})
     }
